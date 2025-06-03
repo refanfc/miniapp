@@ -43,3 +43,6 @@ app.post("/action", express.urlencoded({ extended: true }), (req, res) => {
 app.listen(port, () => {
   console.log(`Mini App berjalan di http://localhost:${port}`);
 });
+app.get("/", (req, res) => {
+  res.send("Mini App Farcaster aktif! Buka /frame untuk melihat Frame.");
+});
